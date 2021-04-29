@@ -1,6 +1,8 @@
 {
+  "name": "qr-generator",
   "dependencies": {
+    "axios": "^0.21",
     "express": "^4.17.1",
-    "axios": "^0.21"
+    "got": "^11.8.2"
   }
 }
