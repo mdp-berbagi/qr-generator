@@ -18,17 +18,22 @@ app.get("/", (req, res) => {
 });
 
 app.get("/render", async (req, res) => {
-  let size = req.query.size || "200x200x";
-  let data = req.query.data || "qr.albasyir.com";
-  let target = `https://chart.googleapis.com/chart?cht=qr&chld=H|1&chs=${size}&chl=${data}`;
+  let width = req.query.width || 0;
+  let hight = req.query.hight || 0;
+  let size = req.query.size || 200;
+  let data = req.query.data || "https://qr.albasyir.com";
 
-  let qr = await axios.get(target, {
+  let imageResolution = [width || size, hight || size].join("x");
+
+  let endpoint = `https://chart.googleapis.com/chart?cht=qr&chld=H|1&chs=${imageResolution}&chl=${data}`;
+
+  let qr = await axios.get(endpoint, {
     responseType: "arraybuffer",
   });
 
-  let result = Buffer.from(qr.data, "binary");
+  let binaryPic = Buffer.from(qr.data, "binary");
 
-  res.contentType("png").status(200).send(result);
+  res.contentType("png").status(200).send(binaryPic);
 });
 
 app.listen(port, () => {
