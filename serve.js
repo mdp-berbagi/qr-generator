@@ -9,7 +9,9 @@ app.get("/", (req, res) => {
     <h1>soon i will update</h1>
     <p>
       But u can create your QR from my API by use :
-      qr.albasyir.com/render?size=200x200&data=qr.albasyir.com
+      <a href='https://qr.albasyir.com/render?size=200&data=qr.albasyir.com'
+      https://qr.albasyir.com/render?size=200&data=qr.albasyir.com
+      </a>
     </p>
     <p>
       Feel free change size and data, please use size with "x", example 300x300
