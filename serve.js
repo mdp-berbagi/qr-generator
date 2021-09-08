@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
       </a>
     </p>
     <p>
-      Feel free change size and data, please use size with "x", example 300x300
+      Feel free change size and data
     </p>
   `);
 });
