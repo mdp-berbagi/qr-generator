@@ -3,5 +3,8 @@
   "dependencies": {
     "axios": "^0.21",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
   }
 }
