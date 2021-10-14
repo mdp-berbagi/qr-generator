@@ -1,0 +1,16 @@
+name: Greetings For New User
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'Thanks for create the issue!, make sure you know this issue came from this project and please put the screenshoot'
+        pr-message: 'Really appreciated!, join as our contributor, please make sure this run on your local and we will test manually (for now)'
