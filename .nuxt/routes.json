@@ -1,0 +1,8 @@
+[
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/carvel/web/qr-generator/pages/index.vue",
+    "chunkName": "pages/index"
+  }
+]

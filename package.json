@@ -2,9 +2,16 @@
   "name": "qr-generator",
   "dependencies": {
     "axios": "^0.21",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
     "eslint": "^7.32.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
   }
 }
