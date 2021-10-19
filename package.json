@@ -3,9 +3,12 @@
   "dependencies": {
     "axios": "^0.21",
     "express": "^4.17.1",
-    "nuxt": "^2.15.8"
+    "nuxt": "^2.15.8",
+    "sass": "^1.43.2",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
+    "@nuxtjs/vuetify": "^1.12.1",
     "eslint": "^7.32.0"
   },
   "scripts": {
