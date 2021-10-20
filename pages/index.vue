@@ -24,9 +24,32 @@
     </v-app-bar>
     <v-main>
       <v-container>
-        <v-sheet class="overflow-y-auto">
-          <h1>hello world</h1>
-        </v-sheet>
+        <v-row>
+          <v-col>
+            <v-text-field
+              v-model="textQR"
+              filled
+              label="QR Text"
+            ></v-text-field>
+          </v-col>
+          <v-col>
+            <v-text-field
+              v-model="size"
+              label="Size"
+              suffix="px"
+              filled
+              :rules="sizeRules"
+            ></v-text-field>
+          </v-col>
+        </v-row>
+        <center>
+          <v-img
+            :src="urlQR"
+            :height="size"
+            :width="size"
+            :sizes="size + 'px'"
+          ></v-img>
+        </center>
       </v-container>
     </v-main>
   </v-app>
@@ -36,8 +59,17 @@
 export default {
   data: () => ({
     drawer: null,
+    textQR: "Hello World",
+    size: 200,
+    sizeRules: [
+      (v) => (v <= 500 && v >= 0) || "Must in range between 0 - 500 px",
+    ],
   }),
-
+  computed: {
+    urlQR() {
+      return `http://localhost:3000/render?data=${this.textQR}&size=${this.size}`;
+    },
+  },
   props: {
     source: String,
   },
