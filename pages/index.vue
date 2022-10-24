@@ -5,7 +5,7 @@
 
       <v-toolbar-title
         ><span class="font-weight-bold warning--text">Free</span>
-        <span class="white--text">QR-Generator</span>
+        <span class="white--text">QR Generator</span>
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
