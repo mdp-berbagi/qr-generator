@@ -59,7 +59,7 @@
 export default {
   data: () => ({
     drawer: null,
-    textQR: "Hello World",
+    textQR: "You can fill any QR text",
     size: 200,
     sizeRules: [
       (v) => (v <= 500 && v >= 0) || "Must in range between 0 - 500 px",
@@ -67,7 +67,7 @@ export default {
   }),
   computed: {
     urlQR() {
-      return `http://localhost:3000/render?data=${this.textQR}&size=${this.size}`;
+      return `http://${process.env.APP_HOST || 'localhost'}:${process.env.APP_PORT || 3000}/render?data=${this.textQR}&size=${this.size}`;
     },
   },
   props: {
