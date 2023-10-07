@@ -1,6 +1,9 @@
 const axios = require("axios");
 
 module.exports = class QrController {
+  /**
+   * show landing page of service
+   */
   static async index(req, res) {
     return res.send(`
     <h1>soon i will update</h1>
@@ -15,6 +18,12 @@ module.exports = class QrController {
     </p>
   `);
   }
+
+  /**
+   * take request from other service / client
+   * allow to get QR code
+   *
+   */
   static async renderQR(req, res) {
     let width = req.query.width || 0;
     let hight = req.query.hight || 0;
