@@ -9,18 +9,6 @@
       </v-toolbar-title>
 
       <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -67,7 +55,9 @@ export default {
   }),
   computed: {
     urlQR() {
-      return `http://${process.env.APP_HOST || 'localhost'}:${process.env.APP_PORT || 3000}/render?data=${this.textQR}&size=${this.size}`;
+      return `http://${process.env.APP_HOST || "localhost"}:${
+        process.env.APP_PORT || 3000
+      }/render?data=${this.textQR}&size=${this.size}`;
     },
   },
   props: {
