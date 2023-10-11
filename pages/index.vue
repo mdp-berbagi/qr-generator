@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" elevate-on-scroll>
+    <v-app-bar app color="accent" elevate-on-scroll>
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
       <v-toolbar-title
@@ -47,7 +47,7 @@
 export default {
   data: () => ({
     drawer: null,
-    textQR: "You can fill any QR text",
+    textQR: "This is example of QR Text, feel free to modify",
     size: 200,
     sizeRules: [
       (v) => (v <= 500 && v >= 0) || "Must in range between 0 - 500 px",
